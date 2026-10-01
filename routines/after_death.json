@@ -1,0 +1,14 @@
+{
+  "name": "after_death",
+  "_note": "auto-runs when the death_screen hook fires. Fill in the click coords for YOUR setup - find them with Window Spy or by hovering and noting cursor pos.",
+  "steps": [
+    { "log": "died - waiting for respawn selection screen" },
+    { "context": "died, picking a redeploy spot" },
+    { "sleep": 5 },
+    { "wait": { "region": [640, 360, 1280, 720], "brightness": [40, 255] }, "timeout": 30 },
+    { "sleep": 1 },
+    { "log": "TODO: set click_at to a valid deploy point on the map" },
+    { "context": "redeployed - resume super credit farming" },
+    { "mode": "control" }
+  ]
+}

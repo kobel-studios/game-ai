@@ -1,0 +1,347 @@
+{
+  "name": "helldivers2",
+  "capture": {
+    "monitor": "primary",
+    "region": null,
+    "fps": 10,
+    "record_width": 320,
+    "record_height": 180,
+    "model_grid": [
+      64,
+      36
+    ]
+  },
+  "control": {
+    "steps_per_sec": 6,
+    "epsilon": 0.3,
+    "credit_window_sec": 1.2,
+    "max_hold_sec": 3.0
+  },
+  "context": {
+    "ttl_sec": 90,
+    "dim": 128
+  },
+  "humanize": {
+    "enabled": true,
+    "step_jitter": 0.35,
+    "hold_jitter": 0.3,
+    "idle_chance": 0.04
+  },
+  "ollama": {
+    "enabled": true,
+    "text_model": "llama3.2:3b",
+    "vision_model": "moondream",
+    "scene_interval_sec": 10,
+    "planner_bias": 0.25,
+    "planner_bias_ttl_sec": 45
+  },
+  "hotkeys": {
+    "pause": "f8",
+    "good": "f9",
+    "bad": "f10",
+    "toggle_control": "f11",
+    "quit": "f12"
+  },
+  "keybinds": {
+    "forward": "w",
+    "back": "s",
+    "left": "a",
+    "right": "d",
+    "sprint": "shift",
+    "interact": "e",
+    "dive": "q",
+    "vault": "space",
+    "map": "tab",
+    "reload": "r",
+    "stim": "v",
+    "stratagem": "f1",
+    "grenade": "g",
+    "_note": "change these to YOUR in-game binds; actions use $name refs"
+  },
+  "actions": [
+    {
+      "name": "idle",
+      "type": "none"
+    },
+    {
+      "name": "forward",
+      "type": "key",
+      "key": "$forward",
+      "hold": 0.8
+    },
+    {
+      "name": "back",
+      "type": "key",
+      "key": "$back",
+      "hold": 0.8
+    },
+    {
+      "name": "left",
+      "type": "key",
+      "key": "$left",
+      "hold": 0.8
+    },
+    {
+      "name": "right",
+      "type": "key",
+      "key": "$right",
+      "hold": 0.8
+    },
+    {
+      "name": "sprint",
+      "type": "key",
+      "key": "$sprint",
+      "hold": 1.2
+    },
+    {
+      "name": "interact",
+      "type": "key",
+      "key": "$interact",
+      "hold": 0.4
+    },
+    {
+      "name": "interact_hold",
+      "type": "key",
+      "key": "$interact",
+      "hold": 1.6
+    },
+    {
+      "name": "dive",
+      "type": "key",
+      "key": "$dive"
+    },
+    {
+      "name": "jump_vault",
+      "type": "key",
+      "key": "$vault"
+    },
+    {
+      "name": "map",
+      "type": "key",
+      "key": "$map"
+    },
+    {
+      "name": "reload",
+      "type": "key",
+      "key": "$reload"
+    },
+    {
+      "name": "stim",
+      "type": "key",
+      "key": "$stim"
+    },
+    {
+      "name": "look_left",
+      "type": "mouse_move",
+      "dx": -180,
+      "dy": 0
+    },
+    {
+      "name": "look_right",
+      "type": "mouse_move",
+      "dx": 180,
+      "dy": 0
+    },
+    {
+      "name": "look_left_far",
+      "type": "mouse_move",
+      "dx": -420,
+      "dy": 0
+    },
+    {
+      "name": "look_right_far",
+      "type": "mouse_move",
+      "dx": 420,
+      "dy": 0
+    },
+    {
+      "name": "look_up",
+      "type": "mouse_move",
+      "dx": 0,
+      "dy": -160
+    },
+    {
+      "name": "look_down",
+      "type": "mouse_move",
+      "dx": 0,
+      "dy": 160
+    },
+    {
+      "name": "fire",
+      "type": "click",
+      "button": "left"
+    },
+    {
+      "name": "aim",
+      "type": "click",
+      "button": "right",
+      "hold": 0.6
+    },
+    {
+      "name": "strat_amr",
+      "type": "stratagem",
+      "key": "$stratagem",
+      "seq": [
+        "down",
+        "left",
+        "right",
+        "up",
+        "down"
+      ],
+      "throw": "click",
+      "backoff": "$back"
+    },
+    {
+      "name": "strat_jump_pack",
+      "type": "stratagem",
+      "key": "$stratagem",
+      "seq": [
+        "down",
+        "up",
+        "up",
+        "down",
+        "up"
+      ],
+      "throw": "click",
+      "backoff": "$back"
+    },
+    {
+      "name": "strat_gatling_sentry",
+      "type": "stratagem",
+      "key": "$stratagem",
+      "seq": [
+        "up",
+        "down",
+        "right",
+        "left"
+      ],
+      "throw": "click",
+      "backoff": "$back"
+    },
+    {
+      "name": "strat_frv",
+      "type": "stratagem",
+      "key": "$stratagem",
+      "seq": [
+        "left",
+        "down",
+        "left",
+        "left",
+        "down",
+        "up",
+        "right"
+      ],
+      "throw": "click",
+      "backoff": "$back"
+    },
+    {
+      "name": "strat_resupply",
+      "type": "stratagem",
+      "key": "$stratagem",
+      "seq": [
+        "down",
+        "down",
+        "up",
+        "right"
+      ],
+      "throw": "click",
+      "backoff": "$back"
+    },
+    {
+      "name": "thermite",
+      "type": "key",
+      "key": "$grenade",
+      "hold": 0.1
+    }
+  ],
+  "pixel_rewards": [
+    {
+      "name": "super_credits_pickup",
+      "mode": "delta",
+      "region": [
+        200,
+        80,
+        350,
+        70
+      ],
+      "delta_min": 25,
+      "reward": 2.0,
+      "cooldown_sec": 10,
+      "_note": "top-center pickup banner flash; calibrate with --calibrate X,Y,W,H"
+    },
+    {
+      "name": "death_screen",
+      "mode": "range",
+      "region": [
+        640,
+        360,
+        1280,
+        720
+      ],
+      "brightness": [
+        0,
+        50
+      ],
+      "red_bias": 15,
+      "reward": -1.0,
+      "cooldown_sec": 20,
+      "_note": "center screen dark+red = death; region sized for 2560x1440"
+    },
+    {
+      "name": "ship_dawdle",
+      "mode": "linger",
+      "region": [
+        0,
+        720,
+        2560,
+        720
+      ],
+      "brightness": [
+        25,
+        95
+      ],
+      "linger_sec": 40,
+      "reward": -0.5,
+      "cooldown_sec": 60,
+      "_note": "bottom half dim+steady = on the destroyer too long; punish. Calibrate: stand on bridge, --calibrate 0,720,2560,720"
+    },
+    {
+      "name": "under_attack",
+      "mode": "range",
+      "region": [
+        0,
+        1100,
+        220,
+        340
+      ],
+      "brightness": [
+        30,
+        150
+      ],
+      "red_bias": 25,
+      "reward": -0.3,
+      "cooldown_sec": 4,
+      "_note": "red damage vignette on screen edge = being hit; punish. Calibrate while taking damage"
+    },
+    {
+      "name": "mission_loaded",
+      "mode": "delta",
+      "region": [
+        0,
+        0,
+        2560,
+        1440
+      ],
+      "delta_min": 70,
+      "reward": 1.0,
+      "cooldown_sec": 60,
+      "_note": "full-frame brightness jump = drop cinematic / mission loaded"
+    }
+  ],
+  "routines_dir": "routines",
+  "routine_triggers": {
+    "death_screen": "after_death",
+    "ship_dawdle": "super_credit_farming"
+  },
+  "data_dir": "data"
+}

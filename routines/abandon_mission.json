@@ -1,0 +1,17 @@
+{
+  "name": "abandon_mission",
+  "_note": "ESC menu -> Abandon Mission -> back to ship. Once back, ship_dawdle hook auto-restarts super_credit_farming. TODO: real button coords - run --clickfind in the ESC menu.",
+  "steps": [
+    { "log": "abandoning mission" },
+    { "context": "map stripped - abandoning mission to reset" },
+    { "key": "esc" },
+    { "sleep": 1.5 },
+    { "log": "TODO: click_at Abandon Mission button (hold to confirm)" },
+    { "sleep": 1 },
+    { "log": "TODO: click_at confirm if asked" },
+    { "wait": { "region": [0, 0, 2560, 1440], "brightness": [0, 255] }, "timeout": 60 },
+    { "on_ship": true },
+    { "context": "back on ship - waiting to run mission select" },
+    { "mode": "control" }
+  ]
+}

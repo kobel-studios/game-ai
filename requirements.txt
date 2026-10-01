@@ -1,0 +1,5 @@
+mss>=9.0
+pillow>=10.0
+numpy>=1.24
+pynput>=1.7
+dxcam>=0.0.5

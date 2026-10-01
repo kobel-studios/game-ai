@@ -1,0 +1,28 @@
+{
+  "name": "loadout_select",
+  "_note": "hellpod bay loadout screen: slot1=AMR, slot2=JumpPack, slot3=FRV, slot4=Gatling Sentry, booster=Stamina Enhancement, then ready. Chained from mission_select.",
+  "steps": [
+    { "log": "loadout: picking stratagems" },
+    { "click_at": [106, 1158] },
+    { "sleep": 1 },
+    { "click_at": [220, 916] },
+    { "sleep": 1 },
+    { "click_at": [413, 1134] },
+    { "sleep": 1 },
+    { "click_at": [519, 1044] },
+    { "sleep": 1 },
+    { "click_at": [202, 1059] },
+    { "sleep": 1 },
+    { "key": "esc" },
+    { "sleep": 0.8 },
+    { "click_at": [576, 1147] },
+    { "sleep": 1 },
+    { "click_at": [444, 692] },
+    { "sleep": 1 },
+    { "click_at": [481, 1265] },
+    { "log": "launched - waiting for drop" },
+    { "wait": { "region": [0, 0, 2560, 1440], "brightness": [0, 255] }, "timeout": 90 },
+    { "context": "dropped in - farming super credits" },
+    { "mode": "control" }
+  ]
+}

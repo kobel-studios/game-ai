@@ -1,0 +1,28 @@
+{
+  "name": "mission_select",
+  "_note": "map table -> sector -> Fronteria -> mission -> hellpod drop spot -> ESC -> walk W+D 7s to hellpod bay -> E -> chains into loadout_select. Coords captured from user's 2560x1440 screen.",
+  "steps": [
+    { "log": "mission select: opening map" },
+    { "context": "going to the galactic map to pick a trivial mission" },
+    { "key": "$interact", "hold": 0.5 },
+    { "sleep": 2.5 },
+    { "click_at": [719, 1108] },
+    { "sleep": 1.5 },
+    { "click_at": [695, 1081] },
+    { "sleep": 1.5 },
+    { "click_at": [1161, 817] },
+    { "sleep": 1 },
+    { "click_at": [1134, 820] },
+    { "sleep": 1.5 },
+    { "click_at": [1810, 1051] },
+    { "sleep": 1.5 },
+    { "key": "esc" },
+    { "sleep": 1.5 },
+    { "log": "walking to hellpod bay" },
+    { "keys": ["w", "d"], "hold": 7 },
+    { "sleep": 0.5 },
+    { "key": "$interact", "hold": 0.5 },
+    { "sleep": 3 },
+    { "routine": "loadout_select" }
+  ]
+}
